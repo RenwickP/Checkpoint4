@@ -1,4 +1,4 @@
-import store from "../store";
+import store from "../store.js";
 
 // @ts-ignore
 const imgApi = axios.create({
@@ -9,10 +9,10 @@ const imgApi = axios.create({
 //TODO create methods to retrieve data trigger the update window when it is complete
 class ImageService {
   async getPic() {
-    let pic = await imgApi.get();
-    store.commit("image", pic);
-    console.log(pic);
-    console.log("from commit", pic);
+    let pic = await imgApi.get("");
+    console.log("from api", pic.data.url);
+    store.commit("image", pic.data.url);
+    console.log("from store", store.State.image);
   }
 }
 

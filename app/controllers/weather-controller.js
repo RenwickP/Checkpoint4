@@ -6,11 +6,16 @@ import store from "../store.js";
 
 //TODO Complete rendering data to the screen
 function drawWeather() {
+  let template = "";
+  let temp = store.State.weather;
+  template = temp.Template;
+  document.querySelector("#weather").innerHTML = template;
   console.log("THE WEATHER MAN SAYS:", store.State.weather);
 }
+
 export default class WeatherController {
   constructor() {
-    store.subscribe("weather", drawWeather);
     WeatherService.getWeather();
+    store.subscribe("weather", drawWeather);
   }
 }
