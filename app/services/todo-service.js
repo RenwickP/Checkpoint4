@@ -8,6 +8,12 @@ const todoApi = axios.create({
 });
 
 class TodoService {
+  async renewInfo() {
+    let res = await todoApi.get();
+    let renew = res.data.data.map(td => new Todos(td));
+    store.commit("todos", renew);
+  }
+
   async getTodos() {
     // console.log("Getting the Todo List");
     let res = await todoApi.get();
@@ -26,6 +32,7 @@ class TodoService {
     let res = await todoApi.post("", todo);
     console.log("Service-Do", res.data.data.description);
     store.commit("todos", todo);
+
     console.log("store", store.State.todos);
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
   }
@@ -44,6 +51,7 @@ class TodoService {
     // let remove = store.State.todos.find(rl => rl.id == todoId);
     // console.log("hello", remove);
     await todoApi.delete(`/${todoId}`);
+    this.renewInfo();
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, what do you need to insure happens?
