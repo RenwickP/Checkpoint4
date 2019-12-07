@@ -41,6 +41,9 @@ class TodoService {
   }
 
   async removeTodoAsync(todoId) {
+    // let remove = store.State.todos.find(rl => rl.id == todoId);
+    // console.log("hello", remove);
+    await todoApi.delete(`/${todoId}`);
     //TODO Work through this one on your own
     //		what is the request type
     //		once the response comes back, what do you need to insure happens?

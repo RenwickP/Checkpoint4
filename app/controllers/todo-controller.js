@@ -18,7 +18,7 @@ export default class TodoController {
 
   constructor() {
     //TODO Remember to register your subscribers
-    console.log("Does this even work?????");
+    // console.log("Does this even work?????");
 
     store.subscribe("todos", _drawTodos);
 
@@ -53,6 +53,7 @@ export default class TodoController {
 
   //NOTE This method will pass an Id to your service for the TODO that will need to be deleted
   async removeTodo(todoId) {
+    // console.log("working", todoId);
     try {
       await TodoService.removeTodoAsync(todoId);
     } catch (error) {
