@@ -15,6 +15,7 @@ class TodoService {
 
   async addTodoAsync(todo) {
     let res = await todoApi.post("", todo);
+    console.log("Service-Do", todo);
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
   }
 

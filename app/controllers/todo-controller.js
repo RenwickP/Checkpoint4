@@ -14,7 +14,7 @@ export default class TodoController {
     e.preventDefault();
     var form = e.target;
     var todo = {
-      input: form.name.value
+      description: form.name.value
       //TODO build the todo object from the data that comes into this method
     };
     console.log("Comptroller!", todo);
