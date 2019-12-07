@@ -10,9 +10,9 @@ const imgApi = axios.create({
 class ImageService {
   async getPic() {
     let pic = await imgApi.get("");
-    console.log("from api", pic.data.url);
+    // console.log("from api", pic.data.url);
     store.commit("image", pic.data.url);
-    console.log("from store", store.State.image);
+    // console.log("from store", store.State.image);
   }
 }
 

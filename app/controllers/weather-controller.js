@@ -10,7 +10,7 @@ function drawWeather() {
   let temp = store.State.weather;
   template = temp.Template;
   document.querySelector("#weather").innerHTML = template;
-  console.log("THE WEATHER MAN SAYS:", store.State.weather);
+  // console.log("THE WEATHER MAN SAYS:", store.State.weather);
 }
 
 export default class WeatherController {

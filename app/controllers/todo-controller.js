@@ -2,11 +2,26 @@ import TodoService from "../services/todo-service.js";
 import store from "../store.js";
 
 //TODO Create the render function
-function _drawTodos() {}
+function _drawTodos() {
+  console.log("working from constructor", store.State.todos);
+  let template = "";
+  let todo = store.State.todos;
+  todo.forEach(td => (template += td.Template));
+  document.querySelector("#input").innerHTML = template;
+}
 
 export default class TodoController {
+  Todos2() {
+    TodoService.getTodos();
+    console.log("button working");
+  }
+
   constructor() {
     //TODO Remember to register your subscribers
+    console.log("Does this even work?????");
+
+    store.subscribe("todos", _drawTodos);
+
     TodoService.getTodos();
   }
 
@@ -21,7 +36,7 @@ export default class TodoController {
     try {
       await TodoService.addTodoAsync(todo);
     } catch (error) {
-      // debugger;
+      debugger;
       console.error("[ERROR]:", error);
     }
   }
