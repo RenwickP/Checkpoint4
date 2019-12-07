@@ -11,7 +11,7 @@ class QuoteService {
   async quote() {
     let quote = await _quoteApi.get();
     store.commit("quote", quote);
-    // console.log("from quote", quote.data.quote.body);
+    console.log("from quote", quote.data.quote.body);
   }
 }
 
