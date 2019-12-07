@@ -19,7 +19,7 @@ export default class TodoController {
     try {
       await TodoService.addTodoAsync(todo);
     } catch (error) {
-      debugger;
+      // debugger;
       console.error("[ERROR]:", error);
     }
   }

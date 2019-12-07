@@ -16,23 +16,41 @@
   </head>
 
   <body id="bg-image">
-    <div id="weather">
-      Your Weather Template
-    </div>
+    <main class="container-fluid">
+      <div id="weather">
+        Your Weather Template
+      </div>
 
-    <div id="quote">
-      The Quote
-    </div>
+      <div id="quote">
+        The Quote
+      </div>
 
-    <div>
-      A Todo List
-      <div id="todo-error"></div>
-      <form onsubmit=""></form>
-      <div id="todos"></div>
-    </div>
+      <div class="row">
+        <div class="col-3">
+          <h5>Data-Box</h5>
+          <div id="todo-error"></div>
+          <form onsubmit="app.todoController.addTodo(event)">
+            <!-- <div class="form-group"> -->
+            <label for=""></label>
+            <input
+              type="text"
+              class="form-control"
+              name=""
+              id=""
+              placeholder=""
+            />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
-    <script type="module" src="app/main.js"></script>
+            <button class="btn btn-primary">
+              Notification <span class="badge badge-primary"></span>
+            </button>
+          </form>
+          <div id="todos"></div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+      <script type="module" src="app/main.js"></script>
+    </main>
   </body>
 </html>
 <html></html>
