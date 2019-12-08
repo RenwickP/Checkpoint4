@@ -6,8 +6,8 @@ export default class Todos {
 
   get Template() {
     return `
-    <p class="csstodo">${this.description}</p>
-    <button onclick="app.todoController.removeTodo('${this.id}')">Done</button>
+    <p class="csstodo">${this.description}<br><button onclick="app.todoController.removeTodo('${this.id}')">Done</button></p>
+    
     
     `;
   }
