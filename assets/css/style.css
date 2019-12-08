@@ -24,3 +24,10 @@
   opacity: 0.5;
   background-color: grey;
 }
+
+.quotes {
+  text-align: center;
+  border: solid;
+  opacity: 0.8;
+  background-color: red;
+}

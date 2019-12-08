@@ -14,7 +14,7 @@ export default class Weather {
   get Template() {
     return `
     <p>${this.city}</p>
-    <p>${this.kelvin} Kelvin, so you know -273.15 for celsius</p>
+    <p>${Math.floor((this.kelvin - 273.15) * 1.8 + 32)} F</p>
     `;
   }
 }
