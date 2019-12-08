@@ -2,3 +2,13 @@
   color: red;
   font-size: 2em;
 }
+
+.box {
+  border: solid;
+  opacity: 0.9;
+  background-color: beige;
+}
+
+.csstodo {
+  font-size: 8px;
+}

@@ -6,8 +6,13 @@ export default class Todos {
 
   get Template() {
     return `
-    <p>${this.description}</p>
+    <p class="csstodo">${this.description}</p>
     <button onclick="app.todoController.removeTodo('${this.id}')">Done</button>
+    
     `;
   }
+}
+
+{
+  /* <button onclick="app.todoController.toggleTodoStatus('${this.id}')">StrikeThrough</button> */
 }

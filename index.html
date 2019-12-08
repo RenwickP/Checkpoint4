@@ -26,20 +26,14 @@
       </div>
 
       <div class="row">
-        <div class="col-3">
-          <h5>Data-Box</h5>
-          <div id="input"></div>
+        <div class="col-3 box">
+          <h5 class="">Data-Box</h5>
+          <div id="input" text-center></div>
           <div id="todo-error"></div>
           <form onsubmit="app.todoController.addTodo(event)">
             <div class="form-group">
               <label for=""></label>
-              <input
-                type="text"
-                class="form-control"
-                name="name"
-                id=""
-                placeholder=""
-              />
+              <input type="text" class="form-control" name="name" />
             </div>
             <button class="btn btn-primary">
               Add <span class="badge badge-primary"></span>
@@ -48,9 +42,9 @@
           <div id="todos"></div>
         </div>
       </div>
-      <button type="submit" onclick="app.todoController.Todos2()">
+      <!-- <button type="submit" onclick="app.todoController.Todos2()">
         Test
-      </button>
+      </button> -->
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
       <script type="module" src="app/main.js"></script>
