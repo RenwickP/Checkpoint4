@@ -31,10 +31,9 @@ class TodoService {
   async addTodoAsync(todo) {
     let res = await todoApi.post("", todo);
     this.renewInfo();
-    console.log("Service-Do", res.data.data.description);
-    // store.commit("todos", todo);
+    // console.log("Service-Do", res.data.data.description);
 
-    console.log("store", store.State.todos);
+    // console.log("store", store.State.todos);
     //TODO Handle this response from the server (hint: what data comes back, do you want this?)
   }
 
