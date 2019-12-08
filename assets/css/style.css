@@ -16,3 +16,10 @@
 .addbutton {
   font-size: 12px;
 }
+
+.weather {
+  text-align: center;
+  border: solid;
+  opacity: 0.5;
+  background-color: grey;
+}
