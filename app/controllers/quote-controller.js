@@ -8,7 +8,7 @@ import store from "../store.js";
 function drawQuote() {
   let q = store.State.quote;
   let template = `<p>${q.data.quote.body}</p><p>${q.data.quote.author}</p>`;
-  template += document.querySelector("#quote").innerHTML = template;
+  document.querySelector("#quote").innerHTML = template;
 }
 
 export default class QuoteController {

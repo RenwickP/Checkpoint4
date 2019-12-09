@@ -3,18 +3,18 @@ import store from "../store.js";
 
 //TODO Create the render function
 function _drawTodos() {
-  console.log("working from constructor", store.State.todos);
+  // console.log("working from constructor", store.State.todos);
   let template = "";
-  let todo = store.State.todos;
-  todo.forEach(td => (template += td.Template));
+
+  store.State.todos.forEach(td => (template += td.Template));
   document.querySelector("#input").innerHTML = template;
 }
 
 function count() {
   let counts = store.State.todos;
-  console.log("from count function", counts);
+  // console.log("from count function", counts);
   let newCount = counts.length;
-  console.log("from count plus", newCount);
+  // console.log("from count plus", newCount);
   document.querySelector("#number").innerHTML = newCount.toString();
 }
 
@@ -40,7 +40,7 @@ export default class TodoController {
       description: form.name.value
       //TODO build the todo object from the data that comes into this method
     };
-    console.log("Comptroller!", todo);
+    // console.log("Comptroller!", todo);
     try {
       await TodoService.addTodoAsync(todo);
     } catch (error) {
