@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Inspire</title>
+    <title>Check Point 4</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -37,7 +37,13 @@
           <form onsubmit="app.todoController.addTodo(event)">
             <div class="form-group">
               <label for=""></label>
-              <input type="text" class="form-control" name="name" />
+              <input
+                type="text"
+                onfocus="this.value=''"
+                class="form-control"
+                name="name"
+              />
+              <div id="number"></div>
             </div>
             <button class="btn btn-primary addbutton">
               New
@@ -46,7 +52,7 @@
           <div id="todos"></div>
         </div>
       </div>
-      <!-- <button type="submit" onclick="app.todoController.Todos2()">
+      <!-- <button type="submit" onclick="app.todoController.striker()">
         Test
       </button> -->
 

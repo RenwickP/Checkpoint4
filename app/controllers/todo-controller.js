@@ -10,17 +10,25 @@ function _drawTodos() {
   document.querySelector("#input").innerHTML = template;
 }
 
+function count() {
+  let counts = store.State.todos;
+  console.log("from count function", counts);
+  let newCount = counts.length;
+  console.log("from count plus", newCount);
+  document.querySelector("#number").innerHTML = newCount.toString();
+}
+
 export default class TodoController {
-  Todos2() {
-    TodoService.getTodos();
-    console.log("button working");
-  }
+  // striker() {
+  //   console.log("button working");
+  //
 
   constructor() {
     //TODO Remember to register your subscribers
     // console.log("Does this even work?????");
 
     store.subscribe("todos", _drawTodos);
+    store.subscribe("todos", count);
 
     TodoService.getTodos();
   }
